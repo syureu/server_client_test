@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "winsock_server_1", "winsock_server_1\winsock_server_1.vcxproj", "{BEFD8248-934B-4075-9BF4-F49B66903192}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEFD8248-934B-4075-9BF4-F49B66903192}.Debug|x64.ActiveCfg = Debug|x64
+		{BEFD8248-934B-4075-9BF4-F49B66903192}.Debug|x64.Build.0 = Debug|x64
+		{BEFD8248-934B-4075-9BF4-F49B66903192}.Debug|x86.ActiveCfg = Debug|Win32
+		{BEFD8248-934B-4075-9BF4-F49B66903192}.Debug|x86.Build.0 = Debug|Win32
+		{BEFD8248-934B-4075-9BF4-F49B66903192}.Release|x64.ActiveCfg = Release|x64
+		{BEFD8248-934B-4075-9BF4-F49B66903192}.Release|x64.Build.0 = Release|x64
+		{BEFD8248-934B-4075-9BF4-F49B66903192}.Release|x86.ActiveCfg = Release|Win32
+		{BEFD8248-934B-4075-9BF4-F49B66903192}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0739887-80D9-4767-BE7C-E21B61576F4A}
+	EndGlobalSection
+EndGlobal
