@@ -10,7 +10,7 @@ int main(int argc, char* argv[]) {
 	WSADATA wsaData;
 	SOCKET hServSock, hClntSock;
 	char message[BUF_SIZE];
-	int strLength, i;
+	int strLength;
 	SOCKADDR_IN servAddr, clntAddr;
 	int clntAddrSize;
 	int portNumber;
@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
 	servAddr.sin_addr.s_addr = htonl(INADDR_ANY);
 	servAddr.sin_port = htons(portNumber);
 
-	if (bind(hServSock, (SOCKADDR*)& servAddr, sizeof(servAddr)) == SOCKET_ERROR) ErrorHandling("bind() error");
+	if (bind(hServSock, (SOCKADDR*)&servAddr, sizeof(servAddr)) == SOCKET_ERROR) ErrorHandling("bind() error");
 	if (listen(hServSock, 5) == SOCKET_ERROR) ErrorHandling("listen() error");
 
 	clntAddrSize = sizeof(clntAddr);
@@ -43,6 +43,7 @@ int main(int argc, char* argv[]) {
 		hClntSock = accept(hServSock, (SOCKADDR*)& clntAddr, &clntAddrSize);
 		if (hClntSock == -1) ErrorHandling("accept() error");
 		else printf("Connectd client %d \n", i + 1);
+		while ((strLength = recv(hClntSock, message, BUF_SIZE, 0)) != 0) send(hClntSock, message, strLength, 0);
 		closesocket(hClntSock);
 	}
 	closesocket(hServSock);
