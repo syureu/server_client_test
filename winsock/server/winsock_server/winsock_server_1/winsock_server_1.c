@@ -1,3 +1,9 @@
+/*
+가장 기초적인 tcp 블로킹 에코소켓이다.
+다음 예제에서는 한번의 recv에 send가 일어나는 부분을 수정할 것이다.
+recv 한번에 모든 데이터를 받았는지 확실하지 않기 때문이다.
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
